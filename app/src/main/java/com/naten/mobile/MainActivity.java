@@ -5,7 +5,7 @@ import android.Manifest;import android.app.*;import android.content.*;import and
 public class MainActivity extends Activity {
  CanvasView canvas; ArrayList<Node> nodes=new ArrayList<>(); ArrayList<String> edges=new ArrayList<>(); boolean connectMode=false; Node selected=null; int nextId=1;
  int dp(float v){return (int)(v*getResources().getDisplayMetrics().density+.5f);}
- @Override public void onCreate(Bundle b){super.onCreate(b);getWindow().setRequestedOrientation(android.content.pm.ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);if(Build.VERSION.SDK_INT>=33&&checkSelfPermission(Manifest.permission.POST_NOTIFICATIONS)!=PackageManager.PERMISSION_GRANTED)requestPermissions(new String[]{Manifest.permission.POST_NOTIFICATIONS},9);load();build();}
+ @Override public void onCreate(Bundle b){super.onCreate(b);if(Build.VERSION.SDK_INT>=33&&checkSelfPermission(Manifest.permission.POST_NOTIFICATIONS)!=PackageManager.PERMISSION_GRANTED)requestPermissions(new String[]{Manifest.permission.POST_NOTIFICATIONS},9);load();build();}
  void build(){LinearLayout root=new LinearLayout(this);root.setOrientation(LinearLayout.VERTICAL);root.setBackgroundColor(Color.rgb(245,246,248));
   LinearLayout bar=new LinearLayout(this);bar.setGravity(Gravity.CENTER_VERTICAL);bar.setPadding(dp(12),dp(6),dp(12),dp(6));bar.setBackgroundColor(Color.rgb(31,33,36));
   TextView logo=t("NATEN",18,Color.WHITE);bar.addView(logo,new LinearLayout.LayoutParams(dp(85),dp(48)));
