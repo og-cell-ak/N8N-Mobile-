@@ -1,6 +1,5 @@
-# NATEN 0.6.4
+# AutoPilot 0.6.4
 
-Android n8n-compatible mobile workflow automation project.
+Android mobile workflow automation project.
 
-
-Build verification trigger for NATEN 0.6.4.
+This branch updates the product branding from NATEN to AutoPilot while keeping the existing 0.6.4 functionality unchanged.
